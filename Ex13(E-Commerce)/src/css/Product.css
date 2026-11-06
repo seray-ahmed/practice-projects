@@ -1,0 +1,89 @@
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Важно: запазва пропорциите на продукта */
+}
+
+.card {
+  width: 250px; /* Малко по-широк за по-добра четимост */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  justify-content: space-between; /* Бута цената надолу */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.productTitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Малко по-плътен, за да стои добре до логото */
+  color: #2c3e50;
+  line-height: 1.3;
+  text-align: center; /* Тъй като логото е центрирано, тук също стои добре */
+  margin: 12px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+} /* Фиксирана височина за заглавието */
+
+.product-info {
+  text-align: center; /* Лявото подравняване изглежда по-модерно */
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between; /* Бута цената вляво, бутона вдясно */
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.price-tag {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+}
+.detail-button {
+  background-color: var(--primary-blue); /* Твоето синьо */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px; /* Заоблен бутон за "soft" визия */
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(1, 51, 98, 0.2);
+}
+.detail-button:hover {
+  background-color: #015cb2; /* По-светлото синьо при посочване */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(1, 63, 121, 0.3);
+}
+.detail-button:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+:root {
+  /* Основни цветове от логото */
+  --primary-blue: #004d95; /* Наситено синьо (C=100 M=90) */
+  --accent-gold: #ffd700; /* Златисто/Жълто акцент (C=1 M=13 Y=88) */
+  --sky-blue: #0486b5; /* Светло синьо (C=70 M=15) */
+
+  /* Неутрални цветове за интерфейса */
+  --bg-light: #f8f9fa;
+  --text-dark: #1a1a1a;
+  --border-color: #e0e0e0;
+  --white: #ffffff;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer {
+  width: 500px !important;
+}
+
+/* App.css */
+
+/* Стил за самия контейнер на Drawer */
+.drawer .MuiDrawer-paper {
+  width: 400px; /* Ширина на кошницата */
+  padding: 20px;
+  background-color: var(--white); /* Използва вашата променлива */
+  font-family: "Quicksand", sans-serif;
+}
+
+.drawer-title {
+  text-align: center;
+  color: var(--primary-blue); /* Вашето основно синьо */
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+/* Стил за всеки отделен продукт в кошницата */
+.basket-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.basket-item img {
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.basket-item-info {
+  flex: 1;
+}
+
+.basket-item-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.basket-item-price {
+  color: #004d95;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0 0 0;
+}
+
+.basket-item-count {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+/* App.css */
+
+.delete-btn {
+  background-color: #ff4d4d; /* Червено за изтриване */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+  align-self: center;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Корекция на basket-item, за да се подредят добре */
+.basket-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.total-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.total-amount-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #004d95; /* Вашето основно синьо */
+}

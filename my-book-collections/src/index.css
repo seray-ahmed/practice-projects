@@ -1,0 +1,178 @@
+/* 1. Глобални настройки и цветове */
+:root {
+  --bg-color: #fdf6e3;
+  --sidebar-bg: #eee8d5;
+  --accent-color: #859900;
+  --text-color: #586e75;
+  --button-hover: #718100;
+  --selected-item: #ffffff;
+  --delete-red: #cb4b16;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* 2. Основен контейнер (Grid) */
+.app {
+  display: grid;
+  grid-template-columns: 40rem 35rem; /* Лява колона за списъка, дясна за формата */
+  align-items: start;
+  gap: 4rem;
+  background-color: var(--bg-color);
+  padding: 4rem;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Списък с книги (Sidebar) */
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.sidebar li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr auto; /* Снимка | Текст | Бутони */
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.sidebar li:hover {
+  background-color: var(--sidebar-bg);
+}
+
+.sidebar li.selected {
+  background-color: var(--selected-item);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Елементи вътре в книгата */
+.sidebar li img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar li h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.sidebar li h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #93a1a1;
+}
+
+/* 5. Бутони */
+.button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 1.2rem; /* Малко по-малко разстояние */
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1.2rem; /* Намали го от 1.3 на 1.2 */
+  white-space: nowrap; /* Важно: забранява на текста да минава на нов ред */
+  min-width: 8rem; /* Дава минимална ширина на бутона */
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Специален стил за Delete бутона */
+.delete-button {
+  background: none;
+  color: var(--delete-red);
+  border: 1px solid transparent;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.delete-button:hover {
+  border-bottom: 1px solid var(--delete-red);
+  background: none;
+}
+
+/* 6. Форми (Update и Add) */
+form {
+  background-color: var(--sidebar-bg);
+  padding: 3rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form h2 {
+  grid-column: 1 / -1;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+input,
+select {
+  padding: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+form .button {
+  grid-column: 2;
+  margin-top: 1rem;
+}
+
+/* 7. Цветове за статуса */
+.reading {
+  color: #268bd2;
+  font-weight: bold;
+}
+.read {
+  color: #859900;
+  font-weight: bold;
+}
+.unread {
+  color: #cb4b16;
+  font-weight: bold;
+}
+
+.raiting {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}

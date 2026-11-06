@@ -1,0 +1,40 @@
+.todo-item {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center; /* Центрира текста и иконите вертикално */
+  justify-content: space-between; /* Текстът вляво, иконите вдясно */
+  padding: 12px 15px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+.todo-text {
+  font-size: 16px;
+  color: #333;
+}
+.todo-icons {
+  display: flex;
+  gap: 12px; /* Разстояние между самите икони */
+  align-items: center;
+}
+/* Стилизиране на иконите */
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    color 0.2s;
+}
+
+.edit-icon:hover {
+  color: #4caf50; /* Син цвят при посочване на Edit */
+  transform: scale(1.1);
+}
+
+.remove-icon:hover {
+  color: #f44336; /* Червен цвят при посочване на Remove */
+  transform: scale(1.1);
+}

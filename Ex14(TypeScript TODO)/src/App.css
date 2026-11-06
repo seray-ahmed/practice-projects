@@ -1,0 +1,47 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif; /* Добавяме шрифт за по-модерен вид */
+  background-color: #f4f4f9; /* Лек фонов цвят */
+  display: flex;
+  justify-content: center;
+}
+
+.todo-create {
+  width: 100%;
+  max-width: 500px; /* Ограничаваме до 500px, но е адаптивно */
+  display: flex;
+  flex-direction: row; /* Подреждаме ги в ред */
+  gap: 10px; /* Разстояние между инпута и бутона */
+  padding: 20px;
+  background: white;
+  border-radius: 8px; /* Заоблени краища */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лека сянка вместо груба рамка */
+  margin-top: 50px;
+}
+
+.todo-input {
+  flex: 1; /* Инпутът заема цялото свободно място */
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: border-color 0.3s; /* Плавна смяна на цвета */
+}
+.todo-input:focus {
+  border-bottom: 2px solid #4caf50; /* Зелен акцент при писане */
+  outline: none;
+}
+
+.todo-create-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.todo-create-button:hover {
+  background-color: #45a049; /* По-тъмно зелено при посочване */
+}

@@ -1,0 +1,88 @@
+.currency-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 50px auto;
+  width: 450px;
+  min-height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-title {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.amount {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+.result {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.amount,
+.result {
+  width: 100px;
+}
+
+.from-currency-option {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.to-currency-option {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.convert-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f39c12; /* Оранжев акцент */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.convert-button:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
